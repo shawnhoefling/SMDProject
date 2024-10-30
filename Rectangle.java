@@ -1,10 +1,18 @@
-public class Rectangle {
-    public Rectangle{
+// completed
+
+public class Rectangle extends Visibility implements ShapeBasic {
+    public Rectangle() {
         // constructor
     }
-    void draw();
-    void grow();
-    String printText();
+    public void draw(){
+        System.out.println("This is a rectangle");
+    }
+    public void grow(){
+        System.out.println("Growing the size of the rectangle");
+    }
+    public String printText(){
+        return "Rectangle";
+    }
 }
 /*
  Add the required content and functionality shown in the class diagram above and following the instructions below.
