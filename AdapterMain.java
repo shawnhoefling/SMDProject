@@ -1,6 +1,40 @@
 public class AdapterMain {
     public static void main(String[] args) {
+        ShapeDrawer drawer = new ShapeDrawer(); //error here, maybe implement or inherit or import?
+
         
+        // Shape objects, 3 rectangles, 2 circles
+        Rectangle rectangle = new Rectangle();
+        Rectangle rectangle2 = new Rectangle();
+        Rectangle rectangle3 = new Rectangle();
+        Circle circle = new Circle();
+        Circle circle2 = new Circle();
+
+
+        // changing visibility, error here under changeVisibility
+        //rectangle.changeVisibility();
+        rectangle2.changeVisibility();
+        //rectangle3.changeVisibility();
+        circle.changeVisibility();
+        //circle2.changeVisibility();
+
+        // adding shapes to Shape drawer through var drawer
+        drawer.addBasicShape(rectangle);
+        drawer.addBasicShape(rectangle2);
+        drawer.addBasicShape(rectangle3);
+        drawer.addBasicShape(circle);
+        drawer.addBasicShape(circle2);
+
+        drawer.draw();
+        drawer.grow();
+        drawer.showVisibility();
+/* 
+        for(int i=0; i < 5; i++) { // calling draw and grow 5 times
+            drawer.draw();
+            drawer.grow();
+        }
+*/
+
     }
     
 }
