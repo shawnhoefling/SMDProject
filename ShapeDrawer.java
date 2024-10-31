@@ -8,7 +8,7 @@ public class ShapeDrawer extends Drawing<ShapeBasic> { // look into parameteriza
         }
         else {
             for(ShapeBasic shape : shapeList) {
-                System.out.println("Drawing the " + shape.getClass().getSimpleName());
+                //System.out.println("Drawing the " + shape.getClass().getSimpleName());
                 shape.draw();
             }
         }
