@@ -15,15 +15,15 @@ public class ShapeAdapter extends Visibility implements ShapeBasic {
 
     @Override
     public String printText(){  // using instanceof to ensure its correct class 
-        if (shapeSpec instanceof Triangle) { // Triangle class not implemented yet
+        if (shapeSpec instanceof Triangle) { // TODO Triangle class not implemented yet
             return "Triangle";
         }
-        else if (shapeSpec instanceof ShapeDiamond) { // Diamond class not implemented yet
+        else if (shapeSpec instanceof ShapeDiamond) { // TODO Diamond class not implemented yet
             return "ShapeDiamond";
 
         }
         else {
-            System.out.println("This shape is not supported");
+            return "This shape is not supported";
         }
 
     }
