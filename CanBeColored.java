@@ -1,3 +1,4 @@
+// done
 public interface CanBeColored {
     default String setColor(String color) { // default implementation to check color and null
         if(color == null) { // if null, return no color

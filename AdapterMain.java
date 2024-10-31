@@ -3,83 +3,83 @@ public class AdapterMain {
         ShapeDrawer drawer = new ShapeDrawer(); //error here, maybe implement or inherit or import?
 
         
-        // Shape objects, 3 rectangles, 2 circles
-        Rectangle rectangle = new Rectangle();
+        // 1. Rectangle1 that is visible
+        Rectangle rectangle1 = new Rectangle();
+        drawer.addBasicShape(rectangle1);
+
+        // 2. Rectrangle2 in background
         Rectangle rectangle2 = new Rectangle();
-        Rectangle rectangle3 = new Rectangle();
-        Circle circle = new Circle();
-        Circle circle2 = new Circle();
-
-
-        // changing visibility, error here under changeVisibility
-        //rectangle.changeVisibility();
-        rectangle2.changeVisibility();
-        //rectangle3.changeVisibility();
-        circle.changeVisibility();
-        //circle2.changeVisibility();
-
-        // adding shapes to Shape drawer through var drawer
-        drawer.addBasicShape(rectangle);
+        rectangle2.changeVisibility(); // rectangle2 IS IN BACKGROUND
         drawer.addBasicShape(rectangle2);
-        drawer.addBasicShape(rectangle3);
-        drawer.addBasicShape(circle);
+
+        // 3. Circle1 that is visible
+        Circle circle1 = new Circle();
+        drawer.addBasicShape(circle1);
+
+        // 4. Circle2 in background 
+        Circle circle2 = new Circle();
+        circle2.changeVisibility(); // cirlce2 Is IN BACKGROUND
         drawer.addBasicShape(circle2);
+
+        // 5. Rectangle3 that is visible
+        Rectangle rectangle3 = new Rectangle();
+        drawer.addBasicShape(rectangle3);
+
+        // 6. Triangle1 that is visible with "Other color"
+        Triangle triangle1 = new Triangle("Other color");
+        ShapeAdapter triangleAdapter1 = new ShapeAdapter(triangle1); // integrating shapespecial
+        drawer.addBasicShape(triangleAdapter1);
+
+        // 7. Diamond1 that is visible with "PURPLE"
+        ShapeDiamond diamond1 = new ShapeDiamond("PURPLE");
+        ShapeAdapter diamondAdapter1 = new ShapeAdapter(diamond1);
+        drawer.addBasicShape(diamondAdapter1);
+
+        // 8. Diamond2 in background with "somethingElse"
+        ShapeDiamond diamond2 = new ShapeDiamond("somethingElse");
+        ShapeAdapter diamondAdapter2 = new ShapeAdapter(diamond2);
+        diamondAdapter2.changeVisibility(); // swtiching visibility with diamondAdaptor
+        drawer.addBasicShape(diamondAdapter2);
+
+        // 9. Diamond3 in background with "Yellow" and dimensions 4.0 and 4.0
+        ShapeDiamond diamond3 = new ShapeDiamond(4.0, 4.0, "Yellow");
+        ShapeAdapter diamondAdapter3 = new ShapeAdapter(diamond3);
+        diamondAdapter3.changeVisibility(); // swtiching visibility with diamondAdaptor
+        drawer.addBasicShape(diamondAdapter3);
+
+        // 10. Triangle2 in background with "Blue" and dimensions 6.0, 6.0, 6.0
+        Triangle triangle2 = new Triangle(6.0, 6.0, 6.0, "Blue");
+        ShapeAdapter triangleAdapter2 = new ShapeAdapter(triangle2); // integrating shapespecial
+        triangleAdapter2.changeVisibility(); // same as above
+        drawer.addBasicShape(triangleAdapter2);
+
+        // 11. Diamond4 is visible with "Green" and dimensions 1.0 and 1.0
+        ShapeDiamond diamond4 = new ShapeDiamond(1.0, 1.0, "Green");
+        ShapeAdapter diamondAdapter4 = new ShapeAdapter(diamond4);
+        drawer.addBasicShape(diamondAdapter4);
+
+        // 12. BrushStroke1 is in background
+        BrushStroke brushStroke1 = new BrushStroke();
+        brushStroke1.changeVisibility();
+        drawer.addBasicShape(brushStroke1);
+
+        // 13. BurshStroke2 is visible with "someColor"
+        BrushStroke brushStroke2 = new BrushStroke();
+        brushStroke2.setColor("someColor"); // setting color for brush stroke
+        drawer.addBasicShape(brushStroke2);
+
+        // 14. BrushStroke3 is visible with "RED"
+        BrushStroke brushStroke3 = new BrushStroke();
+        brushStroke3.setColor("RED"); // setting color for brush stroke
+        drawer.addBasicShape(brushStroke3);
+
+
 
         drawer.draw();
         drawer.grow();
         drawer.showVisibility();
-/* 
-        for(int i=0; i < 5; i++) { // calling draw and grow 5 times
-            drawer.draw();
-            drawer.grow();
-        }
-*/
 
     }
     
 }
 
-/*
- Add the required content and functionality shown in the class diagram & following instructions.
-
-
-In the main method you must...
-
-Create a ShapeDrawer object to be your drawing object (like a canvas where you add objects)
-Create a few objcets (as given below) and add those objects to your drawing...
-Add a rectangle which is visible
-Add a rectangle which is in the background
-Add a circle which is visible
-Add a circle which is in the background
-Add a rectangle which is visible
-Draw your drawing (call the method draw() on it, not on individual objects created in the main method)
-Grow the size of your drawing (call the method grow() on it, not on individual objects created in the main method)
-Print all shapes in your drawing by calling the method showVisibility() on your drawing. 
-The output for each shape (included in the drawing) will include its order number in the drawing, information whether the shape is visible or not, and the type of the shape (see example output below). Finally, the number of objects in the drawing will be shown.
-
-
-So, the main method is rather short in itself. Study the instructions with care! After implementing all required classes and the main method, test your program.
-
-After testing, continue with the changes for the phase 2...
-
-
-Expected output from the program (Phase 1)
-
-    This is a rectangle
-    This is a rectangle
-    This is a circle
-    This is a circle
-    This is a rectangle
-    Growing the size of the rectangle
-    Growing the size of the rectangle
-    Growing the size of the circle
-    Growing the size of the circle
-    Growing the size of the rectangle
-
-    1. shape is visible: Rectangle
-    2. shape is in the background: Rectangle
-    3. shape is visible: Circle
-    4. shape is in the background: Circle
-    5. shape is visible: Rectangle
-    Total number of shapes: 5
- */
