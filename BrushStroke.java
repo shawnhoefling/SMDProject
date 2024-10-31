@@ -7,7 +7,7 @@ public class BrushStroke extends Visibility implements ShapeBasic, CanBeColored 
     
 
     public BrushStroke() { // fix this, ensure thickness is properly set
-        this.thickness = random.nextInt(10, 1); // check bounds here
+        this.thickness = random.nextInt(10) + 1; // check bounds here
     }
     
     @Override

@@ -1,3 +1,4 @@
+
 public class AdapterMain {
     public static void main(String[] args) {
         ShapeDrawer drawer = new ShapeDrawer(); //error here, maybe implement or inherit or import?
