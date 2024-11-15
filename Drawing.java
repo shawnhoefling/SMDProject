@@ -8,7 +8,7 @@ public abstract class Drawing<T> {
     }
     void addBasicShape(T shape){ //element given as parameter 
         if(shape != null) { // if the element is not null shape (element) to the variable of the element
-            shapeList.add(shape); //check addAll
+            shapeList.add(shape); 
             // add element to list
         }
     }
@@ -18,10 +18,3 @@ public abstract class Drawing<T> {
     public abstract void draw(); // abstract method with no implementation
 }
 
-/*
- Add the required content and functionality shown in the class diagram & following instructions.
-
-The method addBasicShape must add the element (given as a parameter) to the list of elements if the element is not null.
-The method getBasicShapes must return a new list of the elements included in the Drawing.
-The method draw() is an abstract method in this class (no implementation).
- */

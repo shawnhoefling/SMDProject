@@ -1,4 +1,3 @@
-// note, should be good!
 // interface
 public interface ShapeBasic {
     public void draw();

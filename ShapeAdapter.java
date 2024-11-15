@@ -1,7 +1,7 @@
 public class ShapeAdapter extends Visibility implements ShapeBasic {
-    private ShapeSpecial shapeSpec; // 
+    private ShapeSpecial shapeSpec; 
     ShapeAdapter(ShapeSpecial shapeSpec){ // constructor 
-        this.shapeSpec = shapeSpec; // 
+        this.shapeSpec = shapeSpec; 
     }
     @Override // overriding as its overriding an interface
     public void draw(){ // draw calls drawshape method on shapeSpec object
@@ -15,10 +15,10 @@ public class ShapeAdapter extends Visibility implements ShapeBasic {
 
     @Override
     public String printText(){  // using instanceof to ensure its correct class 
-        if (shapeSpec instanceof Triangle) { // TODO Triangle class not implemented yet
+        if (shapeSpec instanceof Triangle) { 
             return "Triangle";
         }
-        else if (shapeSpec instanceof ShapeDiamond) { // TODO Diamond class not implemented yet
+        else if (shapeSpec instanceof ShapeDiamond) { 
             return "ShapeDiamond";
 
         }

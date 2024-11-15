@@ -1,7 +1,7 @@
 
 public class AdapterMain {
     public static void main(String[] args) {
-        ShapeDrawer drawer = new ShapeDrawer(); //error here, maybe implement or inherit or import?
+        ShapeDrawer drawer = new ShapeDrawer();
 
         
         // 1. Rectangle1 that is visible

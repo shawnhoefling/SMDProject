@@ -1,12 +1,13 @@
 import java.text.DecimalFormat;
 
-public class ShapeDiamond implements ShapeSpecial, CanBeColored { // ensure correct formatting
+public class ShapeDiamond implements ShapeSpecial, CanBeColored { 
     private double a = 2.0;
     private double b = 2.0;
     private DecimalFormat df2 = new DecimalFormat("#.##");
     private String color = "No color";
 
-    public ShapeDiamond() { // constructor 
+    public ShapeDiamond() { 
+        // constructor 
 
     }
 
@@ -34,7 +35,7 @@ public class ShapeDiamond implements ShapeSpecial, CanBeColored { // ensure corr
     }
 
     @Override
-    public double calculateArea(){ // check to see if it needs to calculate area set to shape
+    public double calculateArea(){ 
         double area = (a * b);
         return area;
     }
@@ -62,7 +63,7 @@ public class ShapeDiamond implements ShapeSpecial, CanBeColored { // ensure corr
     }
 
     @Override
-    public String getColor(){ // check to see if needs to be default
+    public String getColor(){ 
         if("No color".equals(this.color)) {
             return "The shape is not colored";
         }
